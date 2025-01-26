@@ -26,7 +26,7 @@
 
 ## 风险提示
 - 通过提交虚假的节点配置给订阅服务，避免节点配置信息泄露。
-- 另外，您也可以选择自行部署 [WorkerVless2sub 订阅生成服务](https://github.com/cmliu/WorkerVless2sub)，这样既可以利用订阅生成器的便利。
+- 另外，您也可以选择自行部署 [WorkerVlessSub 订阅生成服务](https://github.com/cmliu/WorkerVlessSub)，这样既可以利用订阅生成器的便利。
    
 # 如何使用?
 ## Workers 部署方法
@@ -36,7 +36,7 @@
 
 1. 部署 CF Worker：
    - 在 CF Worker 控制台中创建一个新的 Worker。
-   - 将 [worker.js](https://github.com/cmliu/edgetunnel/blob/main/_worker.js) 的内容粘贴到 Worker 编辑器中。
+   - 将 [worker.js](https://github.com/mingdian68/divib/blob/main/_worker.js) 的内容粘贴到 Worker 编辑器中。
    - 将第 4 行 `userID` 修改成你自己的 **UUID** 。
 
 2. 访问订阅内容：
@@ -52,23 +52,23 @@
    - **如果你是小白，你现在可以直接起飞，不用再往下看了！！！**
 
 4. 使用自己的`优选域名`/`优选IP`的订阅内容：
-   - 如果你想使用自己的优选域名或者是自己的优选IP，可以参考 [WorkerVless2sub GitHub 仓库](https://github.com/cmliu/WorkerVless2sub) 中的部署说明自行搭建。
-   - 打开 [worker.js](https://github.com/cmliu/edgetunnel/blob/main/_worker.js) 文件，在第 12 行找到 `sub` 变量，将其修改为你部署的订阅生成器地址。例如 `let sub = 'sub.cmliussss.workers.dev';`，注意不要带https等协议信息和符号。
+   - 如果你想使用自己的优选域名或者是自己的优选IP，可以参考 [WorkerVlessSub GitHub 仓库](https://github.com/mingdian68/WorkerVlessSub) 中的部署说明自行搭建。
+   - 打开 [worker.js](https://github.com/mingdian68/divib/blob/main/_worker.js) 文件，在第 12 行找到 `sub` 变量，将其修改为你部署的订阅生成器地址。例如 `let sub = 'sub.divib.workers.dev';`，注意不要带https等协议信息和符号。
    - 注意，如果您使用了自己的订阅地址，要求订阅生成器的 `sub`域名 和 `[YOUR-WORKER-URL]`的域名 不同属一个顶级域名，否则会出现异常。您可以在 `sub` 变量赋值为 workers.dev 分配到的域名。
 
 </details>
 
-## Pages 上传 部署方法 **最佳推荐!!!** [视频教程](https://www.youtube.com/watch?v=tKe9xUuFODA&t=436s)
+## Pages 上传 部署方法 **最佳推荐!!!**
 
 <details>
 <summary><code><strong>「 Pages 上传文件部署文字教程 」</strong></code></summary>
 
 1. 部署 CF Pages：
-   - 下载 [main.zip](https://github.com/cmliu/edgetunnel/archive/refs/heads/main.zip) 文件，并点上 Star !!!
-   - 在 CF Pages 控制台中选择 `上传资产`后，为你的项目取名后点击 `创建项目`，然后上传你下载好的 [main.zip](https://github.com/cmliu/edgetunnel/archive/refs/heads/main.zip) 文件后点击 `部署站点`。
+   - 下载 [main.zip](https://github.com/mingdin8/divib/archive/refs/heads/main.zip) 文件，并点上 Star !!!
+   - 在 CF Pages 控制台中选择 `上传资产`后，为你的项目取名后点击 `创建项目`，然后上传你下载好的 [main.zip](https://github.com/mingdian68/divib/archive/refs/heads/main.zip) 文件后点击 `部署站点`。
    - 部署完成后点击 `继续处理站点` 后，选择 `设置` > `环境变量` > **制作**为生产环境定义变量 > `添加变量`。
      变量名称填写**UUID**，值则为你的UUID，后点击 `保存`即可。
-   - 返回 `部署` 选项卡，在右下角点击 `创建新部署` 后，重新上传 [main.zip](https://github.com/cmliu/edgetunnel/archive/refs/heads/main.zip) 文件后点击 `保存并部署` 即可。
+   - 返回 `部署` 选项卡，在右下角点击 `创建新部署` 后，重新上传 [main.zip](https://github.com/mingdian68/divib/archive/refs/heads/main.zip) 文件后点击 `保存并部署` 即可。
 
 2. 访问订阅内容：
    - 访问 `https://[YOUR-PAGES-URL]/[YOUR-UUID]` 即可获取订阅内容。
@@ -93,7 +93,7 @@
 
 </details>
 
-## Pages GitHub 部署方法 [视频教程](https://www.youtube.com/watch?v=tKe9xUuFODA&t=317s)
+## Pages GitHub 部署方法
 
 <details>
 <summary><code><strong>「 Pages GitHub 部署文字教程 」</strong></code></summary>
@@ -129,33 +129,33 @@
 
 # 变量说明
 
-| 变量名 | 示例 | 必填 | 备注 | YT |
-|--------|---------|-|-----|-----|
-| UUID | `90cd4a77-141a-43c9-991b-08263cfe9c10` |✅| 可输入任意值(非UUIDv4标准的值会自动切换成动态UUID) | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=72s) |
+| 变量名 | 示例 | 必填 | 备注 |
+|--------|---------|-|-----|
+| UUID | `1b6c0a3c81e7492f811165b657876a04` |✅| 可输入任意值(非UUIDv4标准的值会自动切换成动态UUID) |
 | KEY | `token` |❌| 动态UUID秘钥，使用变量`KEY`的时候，将不再启用变量`UUID`|  |
-| TIME | `7` |❌| 动态UUID有效时间(默认值:`7`天)|  |
-| UPTIME | `3` |❌| 动态UUID更新时间(默认值:北京时间`3`点更新) |  |
-| PROXYIP | `proxyip.fxxk.dedyn.io:443` |❌| 备选作为访问CFCDN站点的代理节点(支持自定义ProxyIP端口, 支持多ProxyIP, ProxyIP之间使用`,`或`换行`作间隔) | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=166s) |
-| SOCKS5  | `user:password@127.0.0.1:1080` |❌| 优先作为访问CFCDN站点的SOCKS5代理(支持多socks5, socks5之间使用`,`或`换行`作间隔) | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=826s) |
-| GO2SOCKS5  | `blog.cmliussss.com`,`*.ip111.cn`,`*google.com` |❌| 设置`SOCKS5`变量之后，可设置强制使用socks5访问名单(`*`可作为通配符，`换行`作多元素间隔) ||
-| ADD | `icook.tw:2053#官方优选域名` |❌| 本地优选TLS域名/优选IP(支持多元素之间`,`或`换行`作间隔) ||
-| ADDAPI | [https://raw.github.../addressesapi.txt](https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt) |❌| 优选IP的API地址(支持多元素之间`,`或 换行 作间隔) ||
-| ADDNOTLS | `icook.hk:8080#官方优选域名` |❌| 本地优选noTLS域名/优选IP(支持多元素之间`,`或`换行`作间隔) ||
-| ADDNOTLSAPI | [https://raw.github.../addressesapi.txt](https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main/addressesapi.txt) |❌| 优选IP的API地址(支持多元素之间`,`或 换行 作间隔) ||
-| ADDCSV | [https://raw.github.../addressescsv.csv](https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressescsv.csv) |❌| iptest测速结果(支持多元素, 元素之间使用`,`作间隔) ||
-| DLS | `8` |❌| `ADDCSV`测速结果满足速度下限 ||
-| CSVREMARK | `1` |❌| CSV备注所在列偏移量 ||
+| TIME | `7` |❌| 动态UUID有效时间(默认值:`7`天)|
+| UPTIME | `3` |❌| 动态UUID更新时间(默认值:北京时间`3`点更新) |
+| PROXYIP | `proxyip.fxxk.dedyn.io:443` |❌| 备选作为访问CFCDN站点的代理节点(支持自定义ProxyIP端口, 支持多ProxyIP, ProxyIP之间使用`,`或`换行`作间隔) |
+| SOCKS5  | `user:password@127.0.0.1:1080` |❌| 优先作为访问CFCDN站点的SOCKS5代理(支持多socks5, socks5之间使用`,`或`换行`作间隔) |
+| GO2SOCKS5  | `blog.cmliussss.com`,`*.ip111.cn`,`*google.com` |❌| 设置`SOCKS5`变量之后，可设置强制使用socks5访问名单(`*`可作为通配符，`换行`作多元素间隔) |
+| ADD | `icook.tw:2053#官方优选域名` |❌| 本地优选TLS域名/优选IP(支持多元素之间`,`或`换行`作间隔) |
+| ADDAPI | [https://raw.github.../addressesapi.txt](https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt) |❌| 优选IP的API地址(支持多元素之间`,`或 换行 作间隔) |
+| ADDNOTLS | `icook.hk:8080#官方优选域名` |❌| 本地优选noTLS域名/优选IP(支持多元素之间`,`或`换行`作间隔) |
+| ADDNOTLSAPI | [https://raw.github.../addressesapi.txt](https://raw.githubusercontent.com/cmliu/CFcdnVmess2sub/main/addressesapi.txt) |❌| 优选IP的API地址(支持多元素之间`,`或 换行 作间隔) |
+| ADDCSV | [https://raw.github.../addressescsv.csv](https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressescsv.csv) |❌| iptest测速结果(支持多元素, 元素之间使用`,`作间隔) |
+| DLS | `8` |❌| `ADDCSV`测速结果满足速度下限 |
+| CSVREMARK | `1` |❌| CSV备注所在列偏移量 |
 | TGTOKEN | `6894123456:XXXXXXXXXX0qExVsBPUhHDAbXXX` |❌| 发送TG通知的机器人token | 
 | TGID | `6946912345` |❌| 接收TG通知的账户数字ID | 
-| SUB | `VLESS.fxxk.dedyn.io` | ❌ | 优选订阅生成器域名 | |
-| SUBAPI | `SUBAPI.fxxk.dedyn.io` |❌| clash、singbox等 订阅转换后端 | |
-| SUBCONFIG | [https://raw.github.../ACL4SSR_Online_Full_MultiMode.ini](https://raw.githubusercontent.com/cmliu/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini) |❌| clash、singbox等 订阅转换配置文件 | [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=1605s) |
-| SUBEMOJI | `false` |❌| 订阅转换是否启用Emoji(默认`true`) | |
+| SUB | `VLESS.fxxk.dedyn.io` | ❌ | 优选订阅生成器域名 |
+| SUBAPI | `SUBAPI.fxxk.dedyn.io` |❌| clash、singbox等 订阅转换后端 |
+| SUBCONFIG | [https://raw.github.../ACL4SSR_Online_Full_MultiMode.ini](https://raw.githubusercontent.com/mingdian68/ACL4SSR/main/Clash/config/ACL4SSR_Online_Full_MultiMode.ini) |❌| clash、singbox等 订阅转换配置文件 |
+| SUBEMOJI | `false` |❌| 订阅转换是否启用Emoji(默认`true`) |
 | SUBNAME | `edgetunnel` |❌| 订阅名称 | |
-| RPROXYIP | `false` |❌| 设为 true 即可强制获取订阅器分配的ProxyIP(需订阅器支持)| [Video](https://www.youtube.com/watch?v=s91zjpw3-P8&t=1816s) |
-| URL302 | `https://t.me/CMLiussss` |❌| 主页302跳转(支持多url, url之间使用`,`或`换行`作间隔, 小白别用) |  |
-| URL | `https://blog.cmliussss.com` |❌| 主页反代伪装(支持多url, url之间使用`,`或`换行`作间隔, 乱设容易触发反诈) |  |
-| CFPORTS | `2053`,`2096`,`8443` |❌| CF账户标准端口列表 |  |
+| RPROXYIP | `false` |❌| 设为 true 即可强制获取订阅器分配的ProxyIP(需订阅器支持)|
+| URL302 | `https://t.me/CMLiussss` |❌| 主页302跳转(支持多url, url之间使用`,`或`换行`作间隔, 小白别用) |
+| URL | `https://blog.cmliussss.com` |❌| 主页反代伪装(支持多url, url之间使用`,`或`换行`作间隔, 乱设容易触发反诈) |
+| CFPORTS | `2053`,`2096`,`8443` |❌| CF账户标准端口列表 |
 
 # 注意事项
 
@@ -183,34 +183,34 @@
 
 # 实用技巧
 本项目提供灵活的订阅配置方案，支持通过URL参数快速自定义订阅内容。
-- 示例订阅地址： `https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10` 
+- 示例订阅地址： `https://divib.pages.dev/1b6c0a3c81e7492f811165b657876a04` 
 
 1. 更换**订阅生成器**的订阅地址 
 
    快速切换订阅生成器至 `VLESS.fxxk.dedyn.io`：
    ```url
-   https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sub=VLESS.fxxk.dedyn.io
+   https://divib.pages.dev/1b6c0a3c81e7492f811165b657876a04?sub=VLESS.fxxk.dedyn.io
    ```
 
 2. 更换**PROXYIP**的订阅地址
 
    快速更换PROXYIP为 `proxyip.fxxk.dedyn.io`：
    ```url
-   https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?proxyip=proxyip.fxxk.dedyn.io
+   https://divib.pages.dev/1b6c0a3c81e7492f811165b657876a04?proxyip=proxyip.fxxk.dedyn.io
    ```
 
 3. 更换**SOCKS5**的订阅地址
 
    快速设置SOCKS5代理为 `user:password@127.0.0.1:1080`：
    ```url
-   https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?socks5=user:password@127.0.0.1:1080
+   https://divib.pages.dev/1b6c0a3c81e7492f811165b657876a04?socks5=user:password@127.0.0.1:1080
    ```
 
 - 通过提交多个参数快速修改的订阅地址
 
    例如同时修改**订阅生成器**和**PROXYIP**：
    ```url
-   https://edgetunnel.pages.dev/90cd4a77-141a-43c9-991b-08263cfe9c10?sub=VLESS.fxxk.dedyn.io&proxyip=proxyip.fxxk.dedyn.io
+   https://divib.pages.dev/1b6c0a3c81e7492f811165b657876a04?sub=VLESS.fxxk.dedyn.io&proxyip=proxyip.fxxk.dedyn.io
    ```
 
 4. 该项目部署的节点可通过节点PATH(路径)的方式，使用指定的`PROXYIP`或`SOCKS5`！！！**
@@ -233,7 +233,7 @@
 5. **当你的`ADDAPI`可作为`PROXYIP`时，可在`ADDAPI`变量末位添加`?proxyip=true`，即可在生成节点时使用优选IP自身作为`PROXYIP`**
 - 指定 `ADDAPI` 作为 `PROXYIP` 案例
    ```url
-   https://raw.githubusercontent.com/cmliu/WorkerVless2sub/main/addressesapi.txt?proxyip=true
+   https://raw.githubusercontent.com/mingdian68/WorkerVlessSub/main/addressesapi.txt?proxyip=true
    ```
 
 ## 已适配客户端
